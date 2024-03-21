@@ -147,4 +147,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # React front-end setup:
-CSRF_TRUSTED_ORIGINS = ["localhost:3000"]
+# CSRF_TRUSTED_ORIGINS = ["localhost:3000"]
