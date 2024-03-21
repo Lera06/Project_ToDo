@@ -2,6 +2,18 @@ from django.shortcuts import render, redirect
 from django.views.decorators.http import require_POST
 from .models import Todo
 from .forms import TodoForm
+from rest_framework import generics
+from .serializers import TodoSerializer
+
+
+class ListTodo(generics.ListAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
+
+
+class DetailTodo(generics.RetrieveAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
 
 
 def index(request):
